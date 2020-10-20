@@ -1,0 +1,79 @@
+15:04:46.472 [main] INFO  com.intuit.karate.RunnerOptions - found system property 'karate.options': --tags @Test1
+15:04:48.189 [main] INFO  com.intuit.karate.Runner - waiting for parallel features to complete ...
+15:04:48.602 [pool-1-thread-1] INFO  com.intuit.karate - karate.env system property was:  
+15:04:48.615 [pool-1-thread-1] INFO  com.intuit.karate - >> lock acquired, begin callSingle: classpath:helpers/generateToken.feature
+15:04:49.638 [pool-1-thread-1] DEBUG com.intuit.karate - request:
+1 > POST https://conduit.productionready.io/api/users/login
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Length: 65
+1 > Content-Type: application/json; charset=UTF-8
+1 > Host: conduit.productionready.io
+1 > User-Agent: Apache-HttpClient/4.5.12 (Java/11.0.8)
+{"user":{"email":"karate9012@test.com","password":"Karate12345"}}
+
+15:04:50.852 [pool-1-thread-1] DEBUG com.intuit.karate - response time in milliseconds: 1211.21
+1 < 200
+1 < CF-Cache-Status: DYNAMIC
+1 < CF-RAY: 5df71bad3e9906d5-LHR
+1 < Cache-Control: max-age=0, private, must-revalidate
+1 < Connection: keep-alive
+1 < Content-Type: application/json; charset=utf-8
+1 < Date: Fri, 09 Oct 2020 09:34:50 GMT
+1 < ETag: W/"ba0d53d5269f35cd6406255a628c13ad"
+1 < Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+1 < NEL: {"report_to":"cf-nel","max_age":604800}
+1 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report?lkg-colo=21&lkg-time=1602236091"}],"group":"cf-nel","max_age":604800}
+1 < Server: cloudflare
+1 < Set-Cookie: __cfduid=d785a731ceab4c51da25498143946aa0b1602236090; expires=Sun, 08-Nov-20 09:34:50 GMT; path=/; domain=.productionready.io; HttpOnly; SameSite=Lax
+1 < Status: 200 OK
+1 < Transfer-Encoding: chunked
+1 < Vary: Origin
+1 < X-Content-Type-Options: nosniff
+1 < X-Frame-Options: SAMEORIGIN
+1 < X-Powered-By: Phusion Passenger 4.0.60
+1 < X-Request-Id: 04b8e9eb-1b8e-4da4-a9c5-f2e021025060
+1 < X-Runtime: 0.082288
+1 < X-XSS-Protection: 1; mode=block
+1 < cf-request-id: 05ae4fa042000006d56d3ef200000001
+{"user":{"id":117009,"email":"karate9012@test.com","createdAt":"2020-09-28T15:48:14.866Z","updatedAt":"2020-09-28T15:48:14.873Z","username":"KiranDemo","bio":null,"image":null,"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MTE3MDA5LCJ1c2VybmFtZSI6IktpcmFuRGVtbyIsImV4cCI6MTYwNzQyMDA5MH0.VYQMf9UfY6v6sQ06XnwitB9SWCHEzp1oAcgmNM7WSQ4"}}
+
+15:04:50.881 [pool-1-thread-1] INFO  com.intuit.karate - << lock released, cached callSingle: classpath:helpers/generateToken.feature
+15:04:51.308 [pool-1-thread-1] DEBUG com.intuit.karate - request:
+1 > POST https://conduit.productionready.io/api/articles
+1 > Accept-Encoding: gzip,deflate
+1 > Authorization: Token eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MTE3MDA5LCJ1c2VybmFtZSI6IktpcmFuRGVtbyIsImV4cCI6MTYwNzQyMDA5MH0.VYQMf9UfY6v6sQ06XnwitB9SWCHEzp1oAcgmNM7WSQ4
+1 > Connection: Keep-Alive
+1 > Content-Length: 197
+1 > Content-Type: application/json; charset=UTF-8
+1 > Host: conduit.productionready.io
+1 > User-Agent: Apache-HttpClient/4.5.12 (Java/11.0.8)
+{"article":{"tagList":[],"title":"Petyr Baelish","description":"Tyrosh","body":"Never forget who you are. The rest of the world won't. Wear it like an armor and it can never be used against you."}}
+
+15:04:52.246 [pool-1-thread-1] DEBUG com.intuit.karate - response time in milliseconds: 934.06
+1 < 200
+1 < CF-Cache-Status: DYNAMIC
+1 < CF-RAY: 5df71bb61b6bf40b-LHR
+1 < Cache-Control: max-age=0, private, must-revalidate
+1 < Connection: keep-alive
+1 < Content-Type: application/json; charset=utf-8
+1 < Date: Fri, 09 Oct 2020 09:34:52 GMT
+1 < ETag: W/"c8138543abeb914f4e1f1f81c83fd4f1"
+1 < Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+1 < NEL: {"report_to":"cf-nel","max_age":604800}
+1 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report?lkg-colo=21&lkg-time=1602236092"}],"group":"cf-nel","max_age":604800}
+1 < Server: cloudflare
+1 < Set-Cookie: __cfduid=db056d305809d44d15e5361aa6a1a50be1602236091; expires=Sun, 08-Nov-20 09:34:51 GMT; path=/; domain=.productionready.io; HttpOnly; SameSite=Lax
+1 < Status: 200 OK
+1 < Transfer-Encoding: chunked
+1 < Vary: Origin
+1 < X-Content-Type-Options: nosniff
+1 < X-Frame-Options: SAMEORIGIN
+1 < X-Powered-By: Phusion Passenger 4.0.60
+1 < X-Request-Id: 4f361485-92ec-4661-89aa-9d9ee1cb0913
+1 < X-Runtime: 0.075882
+1 < X-XSS-Protection: 1; mode=block
+1 < cf-request-id: 05ae4fa5cf0000f40b23317200000001
+{"article":{"title":"Petyr Baelish","slug":"petyr-baelish-gr15oj","body":"Never forget who you are. The rest of the world won't. Wear it like an armor and it can never be used against you.","createdAt":"2020-10-09T09:34:52.176Z","updatedAt":"2020-10-09T09:34:52.176Z","tagList":[],"description":"Tyrosh","author":{"username":"KiranDemo","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false},"favorited":false,"favoritesCount":0}}
+
+15:04:53.037 [pool-1-thread-1] INFO  com.intuit.karate.Runner - <<pass>> feature 1 of 5: classpath:conduitApp/feature/articles.feature

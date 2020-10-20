@@ -1,0 +1,24 @@
+<testsuite failures="0"
+           name="conduitApp/feature/articles.feature"
+           skipped="0"
+           tests="1"
+           time="1.474196">
+   <testcase classname="conduitApp.feature.articles"
+             name="Add Articles"
+             time="1.474196">
+      <system-out>* url baseURL ............................................................. passed
+* def addArticleRequestBody = read('classpath:conduitApp/json/addArticleRequest.json') . passed
+* def dataGenerator = Java.type('helpers.DataGenerator') .................. passed
+* set addArticleRequestBody.article.title = dataGenerator.getRandomArticleValues().title; . passed
+* set addArticleRequestBody.article.description = dataGenerator.getRandomArticleValues().description; . passed
+* set addArticleRequestBody.article.body = dataGenerator.getRandomArticleValues().body; . passed
+* call read('classpath:helpers/common.feature') ........................... passed
+Given path 'articles' ..................................................... passed
+Given request addArticleRequestBody ....................................... passed
+When method post .......................................................... passed
+Then status 200 ........................................................... passed
+And match response.article.title == addArticleRequestBody.article.title ... passed
+* def slug = response.article.slug ........................................ passed
+* writeToFileWithName(slug,'slugID') ...................................... passed</system-out>
+   </testcase>
+</testsuite>

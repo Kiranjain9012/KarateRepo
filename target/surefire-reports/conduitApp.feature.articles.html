@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+    <link href="res/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="res/karate-report.css" rel="stylesheet" type="text/css">
+    <link href="favicon.ico" rel="shortcut icon">
+    <script src="res/jquery.min.js" type="text/javascript"></script>
+    <script src="res/jquery.tablesorter.min.js" type="text/javascript"></script>
+    <script src="res/bootstrap.min.js" type="text/javascript"></script>
+    <script src="res/karate-report.js" type="text/javascript"></script>
+    <title>conduitApp.feature.articles</title>
+  </head>
+  <body>
+    <div id="root-container">
+      <div id="leftnav">
+        <div class="nav-logo">
+          <a href="karate-summary.html">
+            <img alt="Karate" src="res/karate-logo.svg">
+          </a>
+          <div class="nav-count">
+            <div class="bg-success" id="nav-pass">1</div>
+            <div class="bg-danger" id="nav-fail">0</div>
+          </div>
+        </div>
+        <div id="nav-type">Scenarios</div>         
+        <div id="nav-date">2020-10-09 03:04:53 pm</div>        
+      <div class="nav-container"><div class="nav-item passed"><a href="#[1:15]">[1:15] Add Articles </a></div></div></div>
+      <div id="content">
+      <div class="page-heading alert alert-primary"><a href="karate-summary.html">Summary</a><span class="feature-label">|</span><a href="karate-tags.html">Tags</a><span class="feature-label">|</span><span class="feature-label">Feature:</span><span class="feature-name">conduitApp/feature/articles.feature</span><span class="feature-description">Articles</span></div><div class="scenario"><div class="scenario-heading" id="[1:15]"><div class="heading-container"><div class="scenario-tags"><a class="badge badge-primary" href="karate-tags.html">Test1</a><a class="badge badge-primary" href="karate-tags.html">parallel=false</a></div><span class="scenario-keyword">Scenario: [1:15]</span><span class="scenario-name">Add Articles </span></div><div class="scenario-time passed">ms: 1474</div></div><div class="step-row"><div class="step-container" id="[1:15]bg"><div class="step-ref bg-step">&gt;&gt;</div><div class="step-cell passed">Background:</div></div><div class="time-cell passed"></div></div><div class="step-row" data-parent="[1:15]bg"><div class="step-container" id="1"><div class="step-ref bg-step">1</div><div class="step-cell passed">* url baseURL</div></div><div class="time-cell passed">0</div></div><div class="preformatted" data-parent="1">15:04:50.881 &lt;&lt; lock released, cached callSingle: classpath:helpers/generateToken.feature</div><div class="step-row" data-parent="[1:15]bg"><div class="step-container" id="1.1"><div class="step-ref bg-step">&gt;&gt;</div><div class="step-cell passed">helpers/generateToken.feature</div></div><div class="time-cell passed">2098</div></div><div class="callarg-container" data-parent="1.1"><div class="step-ref"> </div><div class="preformatted">{
+  "baseURL": "https://conduit.productionready.io/api/",
+  "userEmail": "karate9012@test.com",
+  "userPassword": "Karate12345"
+}
+</div></div><div class="step-row" data-parent="[1:15]bg"><div class="step-container" id="2"><div class="step-ref bg-step">2</div><div class="step-indent"> </div><div class="step-cell passed">Given url baseURL</div></div><div class="time-cell passed">0</div></div><div class="preformatted" data-parent="2">15:04:48.603 karate.env system property was:  
+15:04:48.616 &gt;&gt; lock acquired, begin callSingle: classpath:helpers/generateToken.feature</div><div class="step-row" data-parent="[1:15]bg"><div class="step-container" id="3"><div class="step-ref bg-step">3</div><div class="step-indent"> </div><div class="step-cell passed">Given path 'users/login'</div></div><div class="time-cell passed">11</div></div><div class="step-row" data-parent="[1:15]bg"><div class="step-container" id="4"><div class="step-ref bg-step">4</div><div class="step-indent"> </div><div class="step-cell passed">Given request {"user": {"email": "#(userEmail)","password": "#(userPassword)"}}</div></div><div class="time-cell passed">20</div></div><div class="step-row" data-parent="[1:15]bg"><div class="step-container" id="5"><div class="step-ref bg-step">5</div><div class="step-indent"> </div><div class="step-cell passed">When method post</div></div><div class="time-cell passed">2053</div></div><div class="preformatted" data-parent="5">15:04:49.639 request:
+1 &gt; POST https://conduit.productionready.io/api/users/login
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Connection: Keep-Alive
+1 &gt; Content-Length: 65
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Host: conduit.productionready.io
+1 &gt; User-Agent: Apache-HttpClient/4.5.12 (Java/11.0.8)
+{"user":{"email":"karate9012@test.com","password":"Karate12345"}}
+
+15:04:50.852 response time in milliseconds: 1211.21
+1 &lt; 200
+1 &lt; CF-Cache-Status: DYNAMIC
+1 &lt; CF-RAY: 5df71bad3e9906d5-LHR
+1 &lt; Cache-Control: max-age=0, private, must-revalidate
+1 &lt; Connection: keep-alive
+1 &lt; Content-Type: application/json; charset=utf-8
+1 &lt; Date: Fri, 09 Oct 2020 09:34:50 GMT
+1 &lt; ETag: W/"ba0d53d5269f35cd6406255a628c13ad"
+1 &lt; Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+1 &lt; NEL: {"report_to":"cf-nel","max_age":604800}
+1 &lt; Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report?lkg-colo=21&amp;lkg-time=1602236091"}],"group":"cf-nel","max_age":604800}
+1 &lt; Server: cloudflare
+1 &lt; Set-Cookie: __cfduid=d785a731ceab4c51da25498143946aa0b1602236090; expires=Sun, 08-Nov-20 09:34:50 GMT; path=/; domain=.productionready.io; HttpOnly; SameSite=Lax
+1 &lt; Status: 200 OK
+1 &lt; Transfer-Encoding: chunked
+1 &lt; Vary: Origin
+1 &lt; X-Content-Type-Options: nosniff
+1 &lt; X-Frame-Options: SAMEORIGIN
+1 &lt; X-Powered-By: Phusion Passenger 4.0.60
+1 &lt; X-Request-Id: 04b8e9eb-1b8e-4da4-a9c5-f2e021025060
+1 &lt; X-Runtime: 0.082288
+1 &lt; X-XSS-Protection: 1; mode=block
+1 &lt; cf-request-id: 05ae4fa042000006d56d3ef200000001
+{"user":{"id":117009,"email":"karate9012@test.com","createdAt":"2020-09-28T15:48:14.866Z","updatedAt":"2020-09-28T15:48:14.873Z","username":"KiranDemo","bio":null,"image":null,"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MTE3MDA5LCJ1c2VybmFtZSI6IktpcmFuRGVtbyIsImV4cCI6MTYwNzQyMDA5MH0.VYQMf9UfY6v6sQ06XnwitB9SWCHEzp1oAcgmNM7WSQ4"}}</div><div class="step-row" data-parent="[1:15]bg"><div class="step-container" id="6"><div class="step-ref bg-step">6</div><div class="step-indent"> </div><div class="step-cell passed">Then status 200</div></div><div class="time-cell passed">0</div></div><div class="step-row" data-parent="[1:15]bg"><div class="step-container" id="7"><div class="step-ref bg-step">7</div><div class="step-indent"> </div><div class="step-cell passed">* def authToken = response.user.token</div></div><div class="time-cell passed">14</div></div><div class="step-row" data-parent="[1:15]bg"><div class="step-container" id="8"><div class="step-ref bg-step">8</div><div class="step-cell passed">* def addArticleRequestBody = read('classpath:conduitApp/json/addArticleRequest.json')</div></div><div class="time-cell passed">10</div></div><div class="step-row" data-parent="[1:15]bg"><div class="step-container" id="9"><div class="step-ref bg-step">9</div><div class="step-cell passed">* def dataGenerator = Java.type('helpers.DataGenerator')</div></div><div class="time-cell passed">19</div></div><div class="step-row" data-parent="[1:15]bg"><div class="step-container" id="10"><div class="step-ref bg-step">10</div><div class="step-cell passed">* set addArticleRequestBody.article.title = dataGenerator.getRandomArticleValues().title;</div></div><div class="time-cell passed">240</div></div><div class="step-row" data-parent="[1:15]bg"><div class="step-container" id="11"><div class="step-ref bg-step">11</div><div class="step-cell passed">* set addArticleRequestBody.article.description = dataGenerator.getRandomArticleValues().description;</div></div><div class="time-cell passed">48</div></div><div class="step-row" data-parent="[1:15]bg"><div class="step-container" id="12"><div class="step-ref bg-step">12</div><div class="step-cell passed">* set addArticleRequestBody.article.body = dataGenerator.getRandomArticleValues().body;</div></div><div class="time-cell passed">44</div></div><div class="step-row" data-parent="[1:15]bg"><div class="step-container" id="13"><div class="step-ref bg-step">13</div><div class="step-cell passed">* call read('classpath:helpers/common.feature')</div></div><div class="time-cell passed">30</div></div><div class="step-row" data-parent="[1:15]bg"><div class="step-container" id="13.1"><div class="step-ref bg-step">&gt;&gt;</div><div class="step-cell passed">helpers/common.feature</div></div><div class="time-cell passed">9</div></div><div class="step-row" data-parent="[1:15]bg"><div class="step-container" id="14"><div class="step-ref bg-step">14</div><div class="step-indent"> </div><div class="step-cell passed">* def writeToFileWithName =</div></div><div class="time-cell passed">9</div></div><div class="preformatted" data-parent="14">function(input,filename){
+var writeToFile = Java.type('helpers.commonUtils');
+var write = new writeToFile();
+return write.writeToFile(input,filename);
+}</div><div class="step-row"><div class="step-container"><div class="step-ref passed"></div><div class="step-cell comment"># Given header Authorization = 'Token '+ token</div></div><div class="time-cell comment"></div></div><div class="step-row"><div class="step-container" id="15"><div class="step-ref passed">15</div><div class="step-cell passed">Given path 'articles'</div></div><div class="time-cell passed">5</div></div><div class="step-row"><div class="step-container" id="16"><div class="step-ref passed">16</div><div class="step-cell passed">Given request addArticleRequestBody</div></div><div class="time-cell passed">0</div></div><div class="step-row"><div class="step-container" id="17"><div class="step-ref passed">17</div><div class="step-cell passed">When method post</div></div><div class="time-cell passed">944</div></div><div class="preformatted" data-parent="17">15:04:51.309 request:
+1 &gt; POST https://conduit.productionready.io/api/articles
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Authorization: Token eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MTE3MDA5LCJ1c2VybmFtZSI6IktpcmFuRGVtbyIsImV4cCI6MTYwNzQyMDA5MH0.VYQMf9UfY6v6sQ06XnwitB9SWCHEzp1oAcgmNM7WSQ4
+1 &gt; Connection: Keep-Alive
+1 &gt; Content-Length: 197
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Host: conduit.productionready.io
+1 &gt; User-Agent: Apache-HttpClient/4.5.12 (Java/11.0.8)
+{"article":{"tagList":[],"title":"Petyr Baelish","description":"Tyrosh","body":"Never forget who you are. The rest of the world won't. Wear it like an armor and it can never be used against you."}}
+
+15:04:52.247 response time in milliseconds: 934.06
+1 &lt; 200
+1 &lt; CF-Cache-Status: DYNAMIC
+1 &lt; CF-RAY: 5df71bb61b6bf40b-LHR
+1 &lt; Cache-Control: max-age=0, private, must-revalidate
+1 &lt; Connection: keep-alive
+1 &lt; Content-Type: application/json; charset=utf-8
+1 &lt; Date: Fri, 09 Oct 2020 09:34:52 GMT
+1 &lt; ETag: W/"c8138543abeb914f4e1f1f81c83fd4f1"
+1 &lt; Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+1 &lt; NEL: {"report_to":"cf-nel","max_age":604800}
+1 &lt; Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report?lkg-colo=21&amp;lkg-time=1602236092"}],"group":"cf-nel","max_age":604800}
+1 &lt; Server: cloudflare
+1 &lt; Set-Cookie: __cfduid=db056d305809d44d15e5361aa6a1a50be1602236091; expires=Sun, 08-Nov-20 09:34:51 GMT; path=/; domain=.productionready.io; HttpOnly; SameSite=Lax
+1 &lt; Status: 200 OK
+1 &lt; Transfer-Encoding: chunked
+1 &lt; Vary: Origin
+1 &lt; X-Content-Type-Options: nosniff
+1 &lt; X-Frame-Options: SAMEORIGIN
+1 &lt; X-Powered-By: Phusion Passenger 4.0.60
+1 &lt; X-Request-Id: 4f361485-92ec-4661-89aa-9d9ee1cb0913
+1 &lt; X-Runtime: 0.075882
+1 &lt; X-XSS-Protection: 1; mode=block
+1 &lt; cf-request-id: 05ae4fa5cf0000f40b23317200000001
+{"article":{"title":"Petyr Baelish","slug":"petyr-baelish-gr15oj","body":"Never forget who you are. The rest of the world won't. Wear it like an armor and it can never be used against you.","createdAt":"2020-10-09T09:34:52.176Z","updatedAt":"2020-10-09T09:34:52.176Z","tagList":[],"description":"Tyrosh","author":{"username":"KiranDemo","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false},"favorited":false,"favoritesCount":0}}</div><div class="step-row"><div class="step-container" id="18"><div class="step-ref passed">18</div><div class="step-cell passed">Then status 200</div></div><div class="time-cell passed">0</div></div><div class="step-row"><div class="step-container" id="19"><div class="step-ref passed">19</div><div class="step-cell passed">And match response.article.title == addArticleRequestBody.article.title</div></div><div class="time-cell passed">27</div></div><div class="step-row"><div class="step-container" id="20"><div class="step-ref passed">20</div><div class="step-cell passed">* def slug = response.article.slug</div></div><div class="time-cell passed">8</div></div><div class="step-row"><div class="step-container" id="21"><div class="step-ref passed">21</div><div class="step-cell passed">* writeToFileWithName(slug,'slugID')</div></div><div class="time-cell passed">101</div></div></div></div>
+    </div>   
+  </body>
+</html>
